@@ -1,0 +1,9 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "web dev portfolio",
+  "main": "index.js",
+  "author": "Jon Zachary <jontzachary@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
