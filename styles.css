@@ -15,28 +15,28 @@ font-family: 'Ovo', serif;
 font-family: 'Cinzel Decorative', cursive;
 */
 
-
 body {
   background-color: #d2bcca52;
   display: grid;
   /* grid-gap: 0.3vw; */
   grid-template-columns: 1fr 1fr 3fr 1fr;
-  grid-template-rows: 1fr 2fr 4fr .5fr .25fr;
-  grid-template-areas: "header header header header"
-                       "bio bio bio me"
-                       ". projects projects ."
-                       "contact contact contact contact"
-                       "footer footer footer footer"
+  grid-template-rows: 1fr 2fr 4fr 0.5fr 0.25fr;
+  grid-template-areas:
+    "header header header header"
+    "bio bio bio me"
+    ". projects projects ."
+    "contact contact contact contact"
+    "footer footer footer footer";
 }
 
 header {
   grid-area: header;
   text-align: center;
-  background-color: #4B5987;
+  background-color: #4b5987;
   color: white;
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'Hammersmith One', sans-serif;
+  font-family: "Hammersmith One", sans-serif;
 }
 
 .bio {
@@ -45,14 +45,14 @@ header {
   margin: auto;
   margin-left: 10px;
   padding: 1.5rem;
-  background-color: #E1D2D6;
-  font-family: 'Ovo', serif;
+  background-color: #e1d2d6;
+  font-family: "Ovo", serif;
 }
 
 .me {
   grid-area: me;
-  margin:auto;
-  background-color: #874B59
+  margin: auto;
+  background-color: #874b59;
 }
 img {
   height: 283px;
@@ -63,53 +63,119 @@ img {
   grid-area: projects;
   display: grid;
   grid-gap: 2.5vw;
-  grid-template-columns: 1fr 1fr ;
-  grid-template-rows: .75fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.75fr 1fr 1fr;
   grid-template-areas: "title title";
   margin-bottom: 20px;
 }
 
 .projects-title {
-  grid-area:title;
+  grid-area: title;
   text-align: center;
   line-height: 10rem;
-  font-family: 'Cinzel Decorative', cursive;
-  background-color: #4B5987;
+  font-family: "Cinzel Decorative", cursive;
+  background-color: #4b5987;
   font-size: 2rem;
   color: white;
 }
 
-section.projects div {
-  background-color: silver;
+.project {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "project-title project-title"
+    "desc desc"
+    "code deploy";
+}
+
+.project-title {
+  text-align: center;
+  grid-area: project-title;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 1.25rem;
+  background-color: #4b5987;
+  color: white;
+}
+
+.project-desc {
+  grid-area: desc;
+  background-color: lightpink;
+  font-size: 1.25rem;
+}
+
+.project-code {
+  grid-area: code;
+  background-color: steelblue;
+}
+
+.project-deployed {
+  grid-area: deploy;
+  background-color: olivedrab;
 }
 
 .contact {
   grid-area: contact;
   text-align: center;
   font-size: 1.5rem;
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: "Cinzel Decorative", cursive;
   padding-bottom: 20px;
-  background-color: #E1D2D6;
+  background-color: #e1d2d6;
 }
 
 .contact h3 {
   margin-top: 5px;
 }
-.fab, .fas {
-  margin: auto 2rem;
+.contact
+.fab,
+.fas {
+  margin: auto 3rem;
 }
+
+div.project a {
+display: inline-block;
+margin: 1rem 0 0 3rem;
+text-decoration: none;
+}
+
+.label {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  padding-left: 1rem;
+  margin-top: .5rem;
+  margin-left: 40%;
+}
+
+.project-desc p {
+  font-weight:bold;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.project-blurb {
+  display: inline-block;
+  font-family: "Ovo", serif;
+  margin: .5rem .5rem;
+  text-indent: 1.5rem;
+}
+
 footer {
   grid-area: footer;
-  font-family: 'Ovo', serif;
+  font-family: "Ovo", serif;
   font-size: 1.25rem;
-  background-color: #4B5987;
+  background-color: #4b5987;
   color: white;
   text-align: center;
 }
 a {
-   color: inherit;
- }
+  color: inherit;
+}
 
 .heart {
-  color:red;
+  color: red;
 }
