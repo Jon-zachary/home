@@ -165,3 +165,21 @@ a {
 .heart {
   color: red;
 }
+
+@media (max-width: 30em) {
+  body {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .me {
+    display: none;
+  }
+  .projects {
+    margin-left: -3.5rem;
+    grid-template-columns: auto;
+    grid-template-areas: "title";
+  }
+  .bio {
+    margin-top:15px;
+  }
+}
