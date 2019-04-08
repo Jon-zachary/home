@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative|Hammersmith+One|Ovo|");
-
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative|Hammersmith+One|PT+Sans|");
 body {
   display: grid;
   grid-template-columns: 1fr 1fr 3fr 1fr;
@@ -30,11 +29,10 @@ header {
   padding: 1.5rem;
   background-color: #ffdadf;
   outline: solid black 1px;
-  font-family: "Ovo", serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .me {
-  outline: solid black 1px;
   grid-area: me;
   margin: auto;
 }
